@@ -1,0 +1,4 @@
+interface:
+  display_name: "FChat"
+  short_description: "Connect to and work with your FChat shop data."
+  default_prompt: "Dùng FChat báo cáo hội thoại 7 ngày qua"

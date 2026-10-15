@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "fchat": {
+      "type": "http",
+      "url": "https://api.fchat.vn/mcp"
+    }
+  }
+}

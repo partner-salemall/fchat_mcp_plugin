@@ -1,0 +1,13 @@
+{
+  "name": "fchat",
+  "version": "0.1.0",
+  "description": "Connect Claude to FChat: Fan Page and Zalo conversations, customers, orders, reports and automation",
+  "author": {
+    "name": "FChat",
+    "url": "https://fchat.vn"
+  },
+  "homepage": "https://fchat.vn",
+  "repository": "https://github.com/partner-salemall/fchat_mcp_plugin.git",
+  "license": "MIT",
+  "keywords": ["fchat", "crm", "chatbot", "facebook", "zalo", "vietnam"]
+}

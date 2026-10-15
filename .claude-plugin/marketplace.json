@@ -1,0 +1,21 @@
+{
+  "name": "fchat",
+  "owner": {
+    "name": "FChat",
+    "url": "https://fchat.vn"
+  },
+  "metadata": {
+    "description": "Official FChat plugin for Claude Code and Claude Cowork",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "fchat",
+      "source": "./plugins/fchat-claude",
+      "description": "Work with FChat conversations, customers, orders, reports and automation in natural language",
+      "version": "0.1.0",
+      "category": "productivity",
+      "keywords": ["fchat", "crm", "chatbot", "facebook", "zalo", "vietnam"]
+    }
+  ]
+}

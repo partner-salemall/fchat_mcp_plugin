@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "fchat": {
+      "url": "https://api.fchat.vn/mcp",
+      "oauth_resource": "https://api.fchat.vn/mcp"
+    }
+  }
+}

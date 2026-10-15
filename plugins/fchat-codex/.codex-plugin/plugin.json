@@ -1,0 +1,29 @@
+{
+  "name": "fchat",
+  "version": "0.1.0",
+  "description": "Connect Codex to FChat: Fan Page and Zalo conversations, customers, orders, reports and automation",
+  "author": {
+    "name": "FChat",
+    "url": "https://fchat.vn"
+  },
+  "homepage": "https://fchat.vn",
+  "repository": "https://github.com/partner-salemall/fchat_mcp_plugin.git",
+  "license": "MIT",
+  "keywords": ["fchat", "crm", "chatbot", "facebook", "zalo", "vietnam", "codex", "mcp"],
+  "mcpServers": "./.mcp.json",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "FChat",
+    "shortDescription": "Work with your FChat shop in natural language",
+    "longDescription": "FChat MCP server configuration plus business skills: conversation lookup and reply drafts, customer lookup and tags, orders, shop and per-page reports, staff response time, ads and AI credit usage, and a review of flows, message blocks, sequences, keywords and posts.",
+    "developerName": "FChat",
+    "category": "Productivity",
+    "capabilities": ["Read"],
+    "websiteURL": "https://fchat.vn",
+    "defaultPrompt": [
+      "Dùng FChat báo cáo hội thoại 7 ngày qua",
+      "Hội thoại nào chưa được trả lời hôm nay?",
+      "Tìm khách hàng số 0912345678 trên FChat"
+    ]
+  }
+}
