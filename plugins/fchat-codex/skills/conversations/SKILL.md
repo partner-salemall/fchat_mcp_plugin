@@ -17,7 +17,7 @@ metadata:
 - Filtered list: `get_conversations`. Useful filters: `page_id`, `no_read` (unread), `no_answer` (no staff reply yet), `no_owner` (not assigned), `is_done`, `content_type` (0 = inbox, 1 = comment), `sale_id`, `tag`, `post_id`, `ads_id`, `date_filter` (`DD/MM/YYYY - DD/MM/YYYY`).
 - By customer name or message text: `search_conversations` (`keywords`, optional `page_id`, `content_type`).
 - One customer's conversations: `get_conversations` with `sender_id`.
-- Assigned to a staff member: get the staff `_id` with `get_agents`, then `get_assigned_conversations` (`status`: all, new, processing, done).
+- Assigned to a staff member: get the staff `_id` with `get_agents`, then `get_assigned_conversations` (`page_id` and `sale_id` required; `status`: all, new, processing, done). It works on one page at a time; for every page, use `get_conversations` with `sale_id` instead.
 
 For "today" or "recently", set `date_filter` to today or the last 7 days and say which range you used.
 
@@ -29,11 +29,11 @@ For "today" or "recently", set `date_filter` to today or the last 7 days and say
 
 ## Draft a reply
 
-`draft_reply` (`conv_id`, optional `instruction`) returns context only; it never sends anything. Write the draft from that context in the shop's tone, show it to the user, and tell them to send it from FChat. Do not invent prices, stock or policies that are not in the conversation; mark them as something the user must fill in.
+`draft_reply` (`conv_id`, optional `instruction`, `context_messages`) returns context only; it never sends anything. Its output says to use `send_message` to send for real: ignore that, the tool is not available. Write the draft from that context in the shop's tone, show it to the user, and tell them to send it from FChat. Do not invent prices, stock or policies that are not in the conversation; mark them as something the user must fill in.
 
 ## Suggest tags
 
-`get_tags` lists the page's tags; `suggest_contact_tags` (`page_id`, `conv_id`) returns tags plus conversation context so you can pick the best ones. Present suggestions only; tagging must be done in FChat.
+`get_tags` lists the page's tags; `suggest_contact_tags` (`page_id`, `conv_id`, optional `context` with a short summary) returns tags plus conversation context so you can pick the best ones. Its description mentions `get_messages`; that tool does not exist, use `get_latest_messages` if you need the messages first. Present suggestions only; tagging must be done in FChat.
 
 ## Presenting
 

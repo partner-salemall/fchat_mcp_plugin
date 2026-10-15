@@ -14,7 +14,7 @@ metadata:
 ## Find customers
 
 - By name, phone or email: `search_audiences` (`keyword`).
-- Customers of one page: `get_audiences` (`page_id`, optional `keyword`, `page`, `limit`).
+- Customers of one page: `get_audiences` (`page_id`, optional `keyword` for the name only, `page`, `limit` up to 100).
 - Customers with a tag: get the tag `_id` with `get_tags`, then `get_audiences` with `tag_id`.
 
 Search may return near matches. Check the results against what the user typed (exact phone number, accented name) and say if unrelated customers were mixed in.
