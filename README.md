@@ -1,0 +1,1 @@
+# fchat_mcp_plugin
