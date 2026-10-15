@@ -18,15 +18,15 @@ Every statistics tool takes `date_filter` as `DD/MM/YYYY - DD/MM/YYYY`; most als
 
 | Question | Tool |
 |---|---|
-| Overall picture: conversations, customers interacted, new customers, orders and revenue, peak hours, daily chart | `get_message_statistics` |
-| Compare pages | `get_page_statistics` or `get_page_performance` (also by tag and staff) |
+| Overall picture: conversations, customers interacted, new customers, orders and revenue, peak hours, daily chart, per-page table | `get_message_statistics` (`get_statistics` is a lighter shop overview) |
+| Compare pages | `get_page_statistics` (conversations, messages, new customers per page) or `get_page_performance` (per page plus tag usage and top tags) |
 | Customers over the period, top staff, top posts | `get_contact_statistics` |
 | New customers in detail | `get_new_contact_statistics` |
-| Conversations and interactions | `get_conversation_statistics` |
+| Conversations and interactions, new vs returning customers, closing rate, per staff | `get_conversation_statistics` |
 | Staff response time and performance | `get_response_time_statistics` |
-| Facebook Ads results | `get_ads_statistics` (optional `ad_id`) |
+| Facebook Ads results (spend, ROAS, CPL, CPA) | `get_ads_statistics` (optional `ad_id`) |
 | AI chatbot credit usage | `get_credit_statistics` |
-| Stock in and out | `get_store_statistics` (optional `stores`) |
+| Stock in and out | `get_store_statistics` (`stores`: leave empty for all; no tool lists store ids) |
 
 ## Comparing periods
 

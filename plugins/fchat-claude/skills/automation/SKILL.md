@@ -17,7 +17,7 @@ All of these are per page: get the `page_id` with `get_pages` first.
 
 - Flows: `get_flows` (grouped), then `get_flow_detail` (`flow_id` from the `bots` array) for steps, buttons and conditions.
 - Message blocks (the "Danh sách tin nhắn" scripts): `get_message_blocks`, then `get_message_block_detail` (`page_id`, `block_id`).
-- Care sequences: `get_sequences`, then `get_sequence_detail` (`sequence_id`).
+- Care sequences: `get_sequences` returns each sequence with its trigger tag, status and send steps (`bots`); read the steps there. `get_sequence_detail` (`sequence_id`) only returns the name, linked tag and status.
 - Pass `refresh: true` only when the user says they just changed something and the list looks stale.
 
 ## Auto-reply keywords
@@ -26,7 +26,7 @@ All of these are per page: get the `page_id` with `get_pages` first.
 
 ## Posts
 
-`get_posts` (`pages`, `keyword`, `status_post`, `start_date` / `end_date` as `DD/MM/YYYY`). Read the schema for the meaning of each `status_post` value (draft, published, scheduled...).
+`get_posts` (`pages`, `keyword`, `status_post`, `start_date` / `end_date` as `DD/MM/YYYY`). `status_post`: 0 = draft, 1 = published, 2 = scheduled but overdue, 3 = scheduled and waiting.
 
 ## Reviewing
 
